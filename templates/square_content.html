@@ -1,0 +1,11 @@
+<!-- вставка квадратных блоков для записей -->
+    <div class="card mt-3">
+        <h5 class="card-header">{{ post.pub_date|date:"d M Y" }}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{ post.author.get_full_name }}</h5>
+            <p class="card-text">
+                {{ post.text|truncatewords:25|linebreaksbr }}
+            </p>
+            <a href="#" class="btn btn-primary">Перейти</a>
+        </div>
+    </div>
